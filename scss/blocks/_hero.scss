@@ -1,0 +1,187 @@
+.hero{
+  background-image: url(../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &__container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+  &__text-wrapper{
+    max-width: 533px;
+    padding-top: 270px;
+  }
+
+  &__img{
+    margin-top: 50px;
+  }
+
+  &__heading{
+    margin: 0;
+    padding: 0;
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 125.34%;
+    color: #5D748A;
+  }
+
+  &__link-wrapper{
+    margin-top: 64px;
+  }
+
+  &__link-game{
+    margin: 0;
+    padding: 0;
+    padding: 13px 24px;
+    text-decoration: none;
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #FEA244;
+    box-shadow: 0px 4px 22px rgba(253, 145, 71, 0.4);
+    border-radius: 50px;
+  }
+
+  &__link-more{
+    // #F4F7FB
+    margin: 0;
+    padding: 0;
+    margin-left: 16px;
+    padding: 11px 47px;
+    text-decoration: none;
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #4A4952;
+    border: 2px solid #FEA244;
+    border-radius: 50px;
+  }
+}
+
+@media only screen and (max-width: 1220px){
+
+  .hero{
+    &__heading{
+      font-size: 35px;
+    }
+
+    &__img{
+      max-width: 700px;
+      max-height: 698px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1115px){
+
+  .hero{
+    &__heading{
+      font-size: 30px;
+    }
+
+    &__img{
+      max-width: 650px;
+      max-height: 600px;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px){
+
+  .hero{
+
+    &__text-wrapper{
+      padding-top: 200px;
+    }
+
+    &__heading{
+      font-size: 28px;
+    }
+
+    &__img{
+      max-width: 600px;
+      max-height: 530px;
+    }
+
+    &__link-game{
+      font-size: 13px;
+    }
+
+    &__link-more{
+      font-size: 13px;
+    }
+  }
+}
+
+@media only screen and (max-width: 875px){
+
+  .hero{
+
+
+    &__text-wrapper{
+      max-width: 300px;
+    }
+
+    &__heading{
+      font-size: 25px;
+    }
+
+    &__img{
+      max-width: 500px;
+      max-height: 420px;
+    }
+
+    &__link-game{
+      font-size: 12px;
+    }
+
+    &__link-more{
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px){
+
+  .hero{
+
+
+    &__container{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__text-wrapper{
+      margin: 0;
+      padding: 0;
+      max-width: 400px;
+    }
+
+    &__heading{
+      font-size: 35px;
+    }
+
+    &__img{
+      max-width: 550px;
+      max-height: 460px;
+    }
+
+    &__link-game{
+      font-size: 17px;
+    }
+
+    &__link-more{
+      font-size: 17px;
+    }
+  }
+}

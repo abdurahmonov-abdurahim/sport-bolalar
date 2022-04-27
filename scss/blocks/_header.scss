@@ -1,0 +1,260 @@
+// HEADER PART
+
+.header{
+  padding: 14px 64px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 49px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #7569DE;
+
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-wrapper{
+    margin: 0;
+    padding: 0;
+  }
+
+  &__logo-link{
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav{
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__nav-item{
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav-item + &__nav-item{
+    margin-left: 32px;
+  }
+
+  &__nav-link{
+    text-decoration: none;
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #5D748A;
+  }
+
+  // HEADER BUTTONS
+  &__btn{
+    display: flex;
+    align-items: center;
+    margin-left: 64px;
+  }
+
+  &__lang-btn{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D748A;
+  }
+
+  &__lang-icon{
+    margin-right: 6px;
+  }
+
+  &__cabinet-btn{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    padding: 8px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    border: 2px solid #FEA244;
+
+    // TEXT PART
+    font-family: 'Proxima Soft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #5D748A;
+  }
+
+  &__cabinet-icon{
+    margin-right: 22px;
+  }
+
+  // HAMBURGER MENU BUTTON
+  &__hamburger-btn{
+    display: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    background-image: url("../images/icon-menu.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__hamburger-btn:active{
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 1375px){
+
+  .header{
+
+    &__nav-item + &__nav-item{
+      margin-left: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1325px){
+
+  .header{
+
+    &__nav-item + &__nav-item{
+      margin-left: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1290px){
+
+  .header{
+
+    &__nav-item + &__nav-item{
+      margin-left: 20px;
+    }
+
+    &__btn{
+      margin-left: 30px;
+    }
+
+    &__cabinet-btn{
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px){
+
+  .header{
+
+    &__nav-item + &__nav-item{
+      margin-left: 15px;
+    }
+
+    &__nav-item{
+      font-size: 15px;
+      line-height: 17px;
+    }
+
+    &__btn{
+      margin-left: 20px;
+    }
+
+    &__cabinet-btn{
+      font-size: 15px;
+    }
+
+    &__cabinet-icon{
+      margin-right: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px){
+
+  .header{
+    position: relative;
+
+    &__hamburger-btn{
+      display: inline-block;
+    }
+
+    &__nav-list{
+      display: none;
+    }
+  }
+
+  .header--open .header__nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .header--open .header__nav-list{
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+  }
+
+  .header--open .header__nav-item:nth-child(even){
+    margin: 0 32px;
+  }
+
+  .header--open .header__hamburger-btn{
+    background-image: url("../../images/icon-menu-x.svg");
+    background-size: 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+
+  .header{
+
+    &__nav-link{
+      font-size: 15px;
+    }
+
+    &__lang-btn{
+      display: none;
+    }
+
+    &__cabinet-btn{
+      display: none;
+    }
+  }
+
+  .header--open .header__nav-item:nth-child(even){
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 750px){
+
+  .header{
+
+    &__nav-list{
+      flex-direction: column;
+    }
+  }
+}
