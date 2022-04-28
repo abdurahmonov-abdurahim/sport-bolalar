@@ -1,4 +1,5 @@
 .hero{
+  padding-bottom: 80px;
   background-image: url(../images/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -7,7 +8,7 @@
   &__container{
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 160px;
   }
 
   &__text-wrapper{
@@ -168,12 +169,13 @@
     }
 
     &__heading{
-      font-size: 35px;
+      font-size: 26px;
+      line-height: 125.34%;
     }
 
     &__img{
-      max-width: 550px;
-      max-height: 460px;
+      max-width: 317px;
+      max-height: 315px;
     }
 
     &__link-game{
@@ -184,4 +186,24 @@
       font-size: 17px;
     }
   }
+}
+
+@media only screen and (max-width: 370px){
+
+.hero{
+  &__link-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link-game{
+    text-align: center;
+  }
+
+  &__link-more{
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
 }

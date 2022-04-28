@@ -120,11 +120,22 @@
   &__hamburger-btn:active{
     opacity: 0.6;
   }
+
+  &__mobile-bg{
+    display: none;
+    position: absolute;
+    top: 610px;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background: rgba(93, 116, 138, 0.7);
+  }
 }
 
 @media only screen and (max-width: 1375px){
 
   .header{
+    padding: 14px 0;
 
     &__nav-item + &__nav-item{
       margin-left: 25px;
@@ -192,69 +203,149 @@
   .header{
     position: relative;
 
-    &__hamburger-btn{
-      display: inline-block;
+
+    // &__container{
+
+      // }
+
+      &__container {
+        justify-content: flex-start;
+      }
+
+      &__nav {
+        order: 3;
+      }
+
+      &__nav-list {
+        display: none;
+      }
+
+      &__hamburger-btn{
+        display: inline-block;
+        order: 2;
+        margin-left: auto;
+      }
+
+      &__nav-lang{
+        margin-right: 24px;
+      }
     }
 
-    &__nav-list{
-      display: none;
+    .header--open .header__nav-list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .header--open .header__nav-list{
+      background: rgba(255, 255, 255, 0.8);
+      width: 100%;
+    }
+
+    .header--open .header__nav-item:nth-child(even){
+      margin: 0 32px;
+    }
+
+    .header--open .header__hamburger-btn{
+      background-image: url("../../images/icon-menu-x.svg");
+      background-size: 20px 20px;
     }
   }
 
-  .header--open .header__nav-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .header--open .header__nav-list{
-    background: rgba(255, 255, 255, 0.8);
-    width: 100%;
-  }
-
-  .header--open .header__nav-item:nth-child(even){
-    margin: 0 32px;
-  }
-
-  .header--open .header__hamburger-btn{
-    background-image: url("../../images/icon-menu-x.svg");
-    background-size: 20px 20px;
-  }
-}
-
-@media only screen and (max-width: 800px){
-
-  .header{
-
-    &__nav-link{
-      font-size: 15px;
-    }
-
-    &__lang-btn{
-      display: none;
-    }
-
-    &__cabinet-btn{
-      display: none;
+  @media only screen and (max-width: 950px){
+    .header{
+      padding: 14px 0;
     }
   }
 
-  .header--open .header__nav-item:nth-child(even){
-    margin: 0 15px;
-  }
-}
+  @media only screen and (max-width: 800px){
 
-@media only screen and (max-width: 750px){
+    .header{
 
-  .header{
+      &__nav-link{
+        font-size: 15px;
+      }
+    }
 
-    &__nav-list{
-      flex-direction: column;
+    .header--open .header__nav-item:nth-child(even){
+      margin: 0 15px;
     }
   }
-}
+
+  @media only screen and (max-width: 750px){
+
+    .header{
+
+      // &__nav-list{
+        //   flex-direction: column;
+        // }
+
+        &__nav-link{
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 550px){
+
+      .header {
+        &__btn{
+          display: none;
+        }
+
+        &__nav-link{
+          font-weight: 700;
+          font-size: 17px;
+        }
+      }
+
+      .header--open .header__btn{
+        display: flex;
+      }
+
+      .header--open .header__nav-list{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        margin-bottom: 134px;
+      }
+
+      .header--open .header__nav-item:nth-child(even){
+        margin: 0;
+      }
+
+      .header--open .header__nav-item + .header__nav-item{
+        margin-left: 0;
+        margin-top: 13px;
+      }
+
+      .header--open .header__nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 54px 80px 33px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(4px);
+      }
+
+      .header--open .header__mobile-bg{
+        display: block;
+        z-index: -90;
+      }
+    }
